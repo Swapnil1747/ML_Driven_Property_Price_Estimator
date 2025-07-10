@@ -1,0 +1,264 @@
+/* Custom styles to enhance the GUI - Updated style-enhanced-v2 */
+
+body {
+    background-color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f8f9fa;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Subtle moving gradient background animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 10px 25px 10px 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.4);
+    max-width: 450px;
+    margin-top: 40px;
+    color: #343a40;
+    animation: fadeInSlideUp 1s ease forwards;
+    opacity: 0;
+    border: 2px solid transparent;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+/* Prediction result card background black with interactive colors */
+.card {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    color: #f8f9fa !important;
+    border-radius: 12px;
+    box-shadow: 0 0 15px 3px rgba(106, 17, 203, 0.7);
+    padding: 25px;
+    margin-top: 20px;
+    border: 2px solid #6a11cb;
+    transition: box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.card:hover {
+    box-shadow: 0 0 25px 6px rgba(106, 17, 203, 1);
+    border-color: #2575fc;
+}
+
+.card-title {
+    color: #9f7aea;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(159, 122, 234, 0.7);
+    transition: color 0.3s ease;
+}
+
+.card-title:hover {
+    color: #d6bcfa;
+}
+
+.card-text {
+    color: #cbd5e0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(203, 213, 224, 0.6);
+    transition: color 0.3s ease;
+}
+
+.card-text:hover {
+    color: #e2e8f0;
+}
+
+.container:hover {
+    border-color: #2575fc;
+    box-shadow: 0 8px 40px rgba(37, 117, 252, 0.6);
+}
+
+h1 {
+    color: #343a40;
+    font-weight: 700;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease forwards;
+    opacity: 0;
+    text-shadow: 1px 1px 4px rgba(37, 117, 252, 0.7);
+    font-size: 1.4rem;
+}
+
+/* Animations */
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Form controls */
+.form-group label {
+    font-weight: 600;
+    color: #495057;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.form-group label:hover {
+    color: #2575fc;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1.5px solid #ced4da;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease;
+    padding: 10px 12px;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 12px rgba(37, 117, 252, 0.7);
+    transform: scale(1.05);
+    outline: none;
+}
+
+/* Select dropdown focus */
+select.form-control {
+    font-size: 0.85rem;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1.5px solid #ced4da;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease;
+    width: 100%;
+    background: #fff;
+    color: #343a40;
+}
+
+select.form-control:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 12px rgba(106, 17, 203, 0.7);
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+    border: none;
+    font-weight: 600;
+    transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 117, 252, 0.4);
+    border-radius: 12px;
+    padding: 12px 0;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #1a52d1, #4b0fb8);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 117, 252, 0.7);
+    cursor: pointer;
+}
+
+/* Ripple effect on button click */
+.btn-primary:active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: ripple 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple {
+    to {
+        transform: translate(-50%, -50%) scale(4);
+        opacity: 0;
+    }
+}
+
+.btn-secondary {
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(108, 117, 125, 0.4);
+    border-radius: 12px;
+    padding: 10px 20px;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(90, 98, 104, 0.7);
+    cursor: pointer;
+}
+
+.text-center a.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Button pulse animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 117, 252, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(37, 117, 252, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 117, 252, 0);
+    }
+}
+
+.btn-primary:focus {
+    animation: pulse 1.5s infinite;
+    outline: none;
+}
+
+/* Input focus label color change */
+.form-control:focus + label,
+.form-control:focus ~ label {
+    color: #2575fc;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+}

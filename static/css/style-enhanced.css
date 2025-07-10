@@ -1,0 +1,138 @@
+/* Custom styles to enhance the GUI */
+
+body {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f8f9fa;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.3);
+    max-width: 600px;
+    margin-top: 50px;
+    color: #343a40;
+    animation: fadeInSlideUp 1s ease forwards;
+    opacity: 0;
+}
+
+h1 {
+    color: #343a40;
+    font-weight: 700;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease forwards;
+    opacity: 0;
+}
+
+/* Animations */
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Form controls */
+.form-group label {
+    font-weight: 600;
+    color: #495057;
+    transition: color 0.3s ease;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 8px rgba(37, 117, 252, 0.5);
+    transform: scale(1.02);
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+    border: none;
+    font-weight: 600;
+    transition: background 0.4s ease, transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 117, 252, 0.4);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #1a52d1, #4b0fb8);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(37, 117, 252, 0.7);
+}
+
+.btn-secondary {
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.3s ease;
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(108, 117, 125, 0.4);
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(90, 98, 104, 0.7);
+}
+
+.text-center a.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Button pulse animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 117, 252, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(37, 117, 252, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 117, 252, 0);
+    }
+}
+
+.btn-primary:focus {
+    animation: pulse 1.5s infinite;
+    outline: none;
+}
+
+/* Input focus label color change */
+.form-control:focus + label,
+.form-control:focus ~ label {
+    color: #2575fc;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+}

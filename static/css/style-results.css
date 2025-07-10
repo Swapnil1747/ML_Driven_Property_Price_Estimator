@@ -1,0 +1,142 @@
+/* Custom styles for results.html with black background */
+
+body {
+    background-color: black;
+    color: white;
+}
+
+* {
+    color: white !important;
+}
+
+h1, .card-title {
+    color: #00ffff !important; /* bright cyan for headings */
+    text-shadow: 0 0 5px #00ffff;
+    transition: color 0.3s ease;
+}
+
+h1:hover, .card-title:hover {
+    color: #00bfbf !important;
+}
+
+.container {
+    color: white;
+}
+
+.card {
+    background-color: #222;
+    color: white;
+    border: 1px solid #444;
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 255, 255, 0.4);
+    transform: translateY(-5px);
+}
+
+.card .card-title {
+    color: #00cccc !important; /* slightly softer cyan for model name */
+}
+
+.card .card-text {
+    color: #bbbbbb; /* softer gray for predicted price */
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.5);
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    color: #00ffff;
+    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.7);
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 6px rgba(108, 117, 125, 0.5);
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: #565e64;
+    border-color: #565e64;
+    color: #00ffff;
+    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.7);
+    transform: scale(1.05);
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    color: #00ffff;
+}
+
+a.btn-primary, a.btn-secondary {
+    text-decoration: none;
+}
+
+h1, .card-title {
+    cursor: default;
+    user-select: none;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #565e64;
+    border-color: #565e64;
+    color: #00ffff;
+}
+
+a.btn-primary, a.btn-secondary {
+    text-decoration: none;
+}
+
+h1, .card-title {
+    cursor: default;
+    user-select: none;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #565e64;
+    border-color: #565e64;
+    color: #00ffff;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #565e64;
+    border-color: #565e64;
+    color: #00ffff;
+}
